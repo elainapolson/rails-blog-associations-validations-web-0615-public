@@ -12,9 +12,9 @@
 
 <p>
   <h3>Tags:</h3>
-  <% @post.post_tags.each do |post_tag| %>
-    <% tag = @tags.find(post_tag.tag_id) %>
-    <%= tag.name %>
+  <% @post.tag_ids.each do |tag_id| %>
+    <% tag = @tags.find(tag_id) %>
+  <%= tag.name %>
   <% end %>
 </p>
 
